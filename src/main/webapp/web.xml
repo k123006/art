@@ -6,6 +6,10 @@
 
 	<display-name>art</display-name>
 
+	<welcome-file-list>
+		<welcome-file>views/modules/welcome.jsp</welcome-file>
+	</welcome-file-list>
+
 
 
 

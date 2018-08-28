@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="300">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout>
+                <pattern>[%-5p][%d{yyyy-MM-dd HH:mm:ss,SSS}][%C{1}:%L] %m%n</pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile name="RollingFile" fileName="${sys:user.home}/logs/art/art.log"
+                     filePattern="${sys:user.home}/logs/art/art.%d{yyyyMMdd}.log" append="true">
+            <PatternLayout>
+                <pattern>[%-5p][%d{yyyy-MM-dd HH:mm:ss,SSS}][%C{1}:%L] %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="ErrorRollingFile" fileName="${sys:user.home}/logs/art/art-error.log"
+                     filePattern="${sys:user.home}/logs/art/art-error.%d{yyyyMMdd}.log" append="true">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <pattern>[%-5p][%d{yyyy-MM-dd HH:mm:ss,SSS}][%C{1}:%L] %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!-- 将业务dao接口填写进去,并用控制台输出即可 -->
+        <logger name="com.zentech.art.modules" level="DEBUG" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+
+        <root level="info">
+            <appender-ref ref="Console" />
+        </root>
+    </Loggers>
+</Configuration>
