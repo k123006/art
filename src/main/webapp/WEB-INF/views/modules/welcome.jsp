@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,11 +10,11 @@
         (function(){var ua=navigator.userAgent.toLowerCase();var bIsIpad=ua.match(/ipad/i)=="ipad";var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";var bIsAndroid=ua.match(/android/i)=="android";var bIsWM=ua.match(/windows mobile/i)=="windows mobile";if(bIsIpad||bIsIphoneOs||bIsAndroid||bIsWM){window.location.href="http://www.hexicaihui.cn/m";}})();
     </script>
 
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link type="text/css" rel="stylesheet" href="/static/css/nivo-splider.css">
-    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.nivo.slider.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="/art/static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/art/static/css/nivo-splider.css">
+    <script type="text/javascript" src="/art/static/js/jquery.min.js"></script>
+    <script src="/art/static/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/art/static/js/jquery.nivo.slider.pack.js"></script>
 
 </head>
 <body>
@@ -69,11 +70,11 @@
 
     <div id="slider" class="nivoSlider">
 
-        <img src="/static/images/welcome1.jpg" alt="#" title="" width="1920" height="100%" />
+        <img src="/art/static/images/welcome1.jpg" alt="#" title="" width="1920px" height="100%" />
 
-        <img src="/static/images/welcome2.jpg" alt="#" title="" width="1920" height="100%" />
+        <img src="/art/static/images/welcome2.jpg" alt="#" title="" width="1920px" height="100%" />
 
-        <img src="/static/images/welcome3.jpg" alt="#" title="" width="1920" height="100%" />
+        <img src="/art/static/images/welcome3.jpg" alt="#" title="" width="1920px" height="100%" />
 
     </div>
 
